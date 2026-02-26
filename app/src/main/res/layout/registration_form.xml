@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/gray2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="25dp"
+    android:paddingLeft="25dp"
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Registration of Bride and Groom's name only!"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=" ( केवल दूल्हा और दुल्हन के नाम का पंजीकरण! )"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+    <TextView
+        android:layout_gravity="right"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/Gray"
+        android:text="All Fields are mandatory"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/shade_black1"
+        android:text="First Name / पहला नाम"/>
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittxt_gray_line"
+        android:padding="9dp"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/shade_black1"
+        android:text="Middle Name / पिता / पति का नाम"/>
+
+    <EditText
+        android:textColor="@color/black"
+        android:singleLine="true"
+
+        android:id="@+id/middle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittxt_gray_line"
+        android:padding="9dp"
+        android:textSize="15dp"/>
+
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/shade_black1"
+        android:text="Last Name / कुलनाम"/>
+
+    <EditText
+        android:textColor="@color/black"
+        android:singleLine="true"
+
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittxt_gray_line"
+        android:padding="9dp"
+        android:textSize="15dp"/>
+
+
+    <TextView
+        android:id="@+id/gender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Gender"
+        android:textColor="@color/shade_black1"
+        android:textSize="14dp" />
+
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/edittxt_gray_line">
+
+        <Spinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Select Date of Birth"
+        android:textSize="16dp"
+        android:textColor="@color/shade_black1"/>
+
+
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text=""
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/ic_baseline_date_range_24"
+            android:id="@+id/btn_date"/>
+
+        <TextView
+            android:id="@+id/in_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_date"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:layout_below="@+id/in_date"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/btn_date"
+            android:background="@color/LightGrey" />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/shade_black1"
+        android:text="Age"/>
+
+
+    <EditText
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:enabled="false"
+        android:maxLength="2"
+        android:id="@+id/age"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittxt_gray_line"
+        android:padding="9dp"
+        android:textSize="15dp"/>
+
+
+
+    <!--todo commented by sagar 10 April 2025  &lt;!&ndash;-->
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Email Id / ईमेल आईडी"/>-->
+<!--    -->
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+<!--        android:id="@+id/email"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:textSize="15dp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Alternate Email Id/ वैकल्पिक ईमेल आईडी"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+
+<!--        android:id="@+id/alternate_email"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:textSize="15dp"/>-->
+
+
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Mobile"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+
+<!--        android:id="@+id/mobile"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:maxLength="10"-->
+
+<!--        android:inputType="number"-->
+<!--        android:textSize="15dp"/>-->
+<!--    -->
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Whatsapp No / व्हाट्सएप नंबर"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+
+<!--        android:id="@+id/whatapp_mobile"-->
+<!--        android:inputType="number"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:maxLength="10"-->
+
+<!--        android:textSize="15dp"/>-->
+<!--    -->
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Password / पासवर्ड"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+
+<!--        android:id="@+id/password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:textSize="15dp"/>-->
+<!--    -->
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Confirm Password / पासवर्ड की पुष्टि कीजिये"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+
+<!--        android:id="@+id/confirm_password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:textSize="15dp"/>-->
+<!--    -->
+<!--    <TextView-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/shade_black1"-->
+<!--        android:text="Reference Code (Optional)"/>-->
+
+<!--    <EditText-->
+<!--        android:textColor="@color/black"-->
+<!--        android:singleLine="true"-->
+<!--        android:id="@+id/reference_code"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/edittxt_gray_line"-->
+<!--        android:padding="9dp"-->
+<!--        android:textSize="15dp"/>-->
+<!--    &ndash;&gt;-->
+    <RelativeLayout
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/continue_btn_bg"
+        android:gravity="center"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp">
+
+        <TextView
+
+            android:id="@+id/next_btn_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!--progress bar code-->
+        <LinearLayout
+            android:id="@+id/ProgressLL"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/next_btn_txt"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal" />
+
+        </LinearLayout>
+        <!--end progress bar code-->
+
+    </RelativeLayout>
+
+
+
+    <include
+        layout="@layout/below_next_btn_layout"/>
+
+
+</LinearLayout>

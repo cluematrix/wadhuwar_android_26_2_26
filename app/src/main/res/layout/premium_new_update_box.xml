@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/new_upgrade_cv"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="13dp"
+        android:elevation="19dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingRight="20dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/justjoinL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="@color/Red"
+                    app:strokeWidth="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="     Upgrade to New Plan!          "
+                        android:textAllCaps="true"
+                        android:textColor="@color/Red"
+                        android:textSize="13sp"
+                        android:textStyle="bold|italic" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/close_btn_new"
+                    android:padding="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="22dp"
+                    android:layout_width="22dp"
+                    android:background="@drawable/close_img"/>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="20dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_weight="1.5"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/upgrade_btn"
+                    android:id="@+id/t1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Activate new plan"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:id="@+id/upgrade_new_btn"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/curve_blue_btn_bg"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upgrade New Plan"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

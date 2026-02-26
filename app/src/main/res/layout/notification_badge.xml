@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/count_msg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/blue_circle"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+</merge><!--
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/count_msg"
+    android:layout_width="18dp"
+    android:layout_height="18dp"
+    android:background="@drawable/blue_circle"
+    android:gravity="center"
+    android:minWidth="15dp"
+    android:minHeight="15dp"
+    android:singleLine="true"
+    android:textColor="@android:color/white"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:visibility="gone" />
+-->

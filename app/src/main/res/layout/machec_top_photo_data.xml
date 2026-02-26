@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:background="@drawable/b"
+        android:layout_margin="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+
+        app:cardCornerRadius="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="@drawable/b"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:background="@drawable/matches_gradient_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_shield"
+                        />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Smith C"/>
+
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/matches_tran_bg_oval"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_baseline_radio_button_checked_24"
+                            />
+
+
+                        <TextView
+                            android:gravity="center"
+
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:text="online"/>
+
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/matches_tran_bg_oval"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/couple_pink"
+                            />
+
+
+                        <TextView
+                            android:gravity="center"
+
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:text="You &amp; Him"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text="24 yrs,5 6"/>
+
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/ic_baseline_brightness_1_24"
+                    />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text="Physician Assistant"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text="Hindi, Parsi"/>
+
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/ic_baseline_brightness_1_24"
+                    />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text="Panchkula, Harayana"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

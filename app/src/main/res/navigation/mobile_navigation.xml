@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.WadhuWarProject.WadhuWar.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_myshaddi"
+        android:name="com.WadhuWarProject.WadhuWar.fragments.MyProfileFragment"
+        android:label="MyProfile"
+        tools:layout="@layout/fragment_my_profile" />
+
+    <fragment
+        android:id="@+id/navigation_mathces"
+        android:name="com.WadhuWarProject.WadhuWar.fragments.MatchesFragment"
+        android:label="Matches"
+        tools:layout="@layout/fragment_matches" />
+
+    <fragment
+        android:id="@+id/navigation_inbox"
+        android:name="com.WadhuWarProject.WadhuWar.fragments.InboxFragment"
+        android:label="Inbox"
+        tools:layout="@layout/fragment_inbox" />
+
+    <fragment
+        android:id="@+id/navigation_melava"
+        android:name="com.WadhuWarProject.WadhuWar.fragments.MelavaFragment"
+        android:label="Melava"
+        tools:layout="@layout/fragment_melava" />
+</navigation>

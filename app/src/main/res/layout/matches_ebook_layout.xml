@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_red"
+    android:layout_marginTop="1dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<androidx.appcompat.widget.Toolbar
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:id="@+id/toolbar_top"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+
+
+        <LinearLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/ebook_layout"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top_cv"
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:background="@color/dark_red"
+
+                    android:paddingBottom="13dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/e_icon"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        android:src="@drawable/ic_book_education_tool" />
+
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/e_icon"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="E-Book - स्नेह बंधन "/>
+                        <TextView
+                            android:layout_marginRight="23dp"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="एप पर किया गया वधु वर  परीचय रजिस्टर   को पुस्तिका मे प्रकाशित करे"/>
+                    </LinearLayout>
+
+
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="18dp"
+                        android:layout_width="18dp"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+<!--
+    </androidx.appcompat.widget.Toolbar>
+-->
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.material.appbar.AppBarLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:background="@drawable/ic_bg1"-->
+<!--android:layout_marginTop="1dp"-->
+
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--&lt;!&ndash;<androidx.appcompat.widget.Toolbar-->
+<!--    app:layout_scrollFlags="scroll|enterAlways"-->
+<!--    android:id="@+id/toolbar_top"-->
+<!--    android:background="@color/white"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">&ndash;&gt;-->
+
+
+<!--<LinearLayout-->
+<!--    app:layout_scrollFlags="scroll|enterAlways"-->
+<!--    android:id="@+id/ebook_layout"-->
+
+<!--    android:layout_marginRight="10dp"-->
+<!--    android:layout_marginLeft="10dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/top_cv"-->
+
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:cardCornerRadius="7dp"-->
+<!--        app:cardElevation="5dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:background="@drawable/ic_bg1"-->
+<!--            android:paddingBottom="13dp"-->
+<!--            android:paddingRight="10dp"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/e_icon"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:src="@drawable/ic_book_education_tool" />-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_toRightOf="@+id/e_icon"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="E-Book - स्नेह बंधन "/>-->
+<!--                <TextView-->
+<!--                    android:layout_marginRight="23dp"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="एप पर किया गया वधु वर  परीचय रजिस्टर   को पुस्तिका मे प्रकाशित करे"/>-->
+<!--            </LinearLayout>-->
+
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:background="@drawable/ic_baseline_arrow_forward_ios_24"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_height="18dp"-->
+<!--                android:layout_width="18dp"/>-->
+
+<!--        </RelativeLayout>-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--</LinearLayout>-->
+
+
+
+<!--&lt;!&ndash;-->
+<!--    </androidx.appcompat.widget.Toolbar>-->
+<!--&ndash;&gt;-->
+
+
+
+
+<!--</com.google.android.material.appbar.AppBarLayout>-->
+

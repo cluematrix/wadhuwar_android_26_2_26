@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- For: /storage/emulated/0/Android/data/com.WadhuWarProject.WadhuWar/files/Pictures/shared_profile/ -->
+    <external-files-path
+        name="shared_profile_images"
+        path="Pictures/shared_profile/" />
+
+    <!-- For: /storage/emulated/0/Android/data/com.WadhuWarProject.WadhuWar/files/Pictures/shared_images/ -->
+    <external-files-path
+        name="shared_images"
+        path="Pictures/shared_images/" />
+
+    <!-- For: /storage/emulated/0/Android/data/com.WadhuWarProject.WadhuWar/files/Pictures/ -->
+    <external-files-path
+        name="pictures"
+        path="Pictures/" />
+
+    <!-- For general external files -->
+    <external-files-path
+        name="external_files"
+        path="." />
+
+    <!-- For cache directory -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <!-- For external storage root -->
+    <external-path
+        name="external_storage_root"
+        path="." />
+</paths>
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    &lt;!&ndash; Grant access to /storage/emulated/0/Android/data/your_package/files/Pictures/ &ndash;&gt;-->
+<!--    <external-files-path-->
+<!--        name="shared_images"-->
+<!--        path="Pictures/shared_images" />-->
+<!--</paths>-->

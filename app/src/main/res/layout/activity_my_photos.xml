@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <!--toolbar-->
+    <include
+        layout="@layout/app_bar_layout"/>
+    <!--end toolbar-->
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray2"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/image_rv"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <LinearLayout
+
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:background="@color/Gray"
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                  />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/add_photo_btn"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <ImageView
+                        android:id="@+id/cam"
+                        android:background="@drawable/ic_baseline_photo_camera_24"
+                        android:layout_height="wrap_content"
+                        android:layout_width="24dp"
+                        android:paddingTop="24dp" />
+
+
+                    <TextView
+                        android:layout_toRightOf="@+id/cam"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="17dp"
+                        android:text="  Add more Photos"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+</LinearLayout>

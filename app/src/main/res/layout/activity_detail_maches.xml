@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    android:id="@+id/featurefragmentCor">
+
+    <FrameLayout
+        android:background="@color/gray2"
+        android:id="@+id/featurefragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolbar_appbar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:id="@+id/sv_feature"
+                android:layout_marginTop="0dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--about-->
+
+                    <include layout="@layout/detail_maches_top_layout" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="1dp">
+
+                        <RelativeLayout
+                            android:layout_height="60dp"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+
+                            <LinearLayout
+                                android:id="@+id/likeLL"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentLeft="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal">
+
+
+                                <com.like.LikeButton
+                                    android:id="@+id/likeButton"
+                                    android:layout_width="26dp"
+                                    android:layout_height="25dp"
+                                    app:anim_scale_factor="2"
+                                    app:circle_end_color="@color/colorPrimaryDark"
+                                    app:circle_start_color="@color/colorPrimary"
+                                    app:dots_primary_color="@color/colorPrimaryDark"
+                                    app:dots_secondary_color="@color/colorPrimary"
+                                    app:icon_size="25dp"
+                                    app:icon_type="heart"
+                                    app:is_enabled="true"
+                                    app:liked="false" />
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/Gray"
+                                    android:layout_toRightOf="@+id/likeButton"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:text="  Like"/>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/likeLL"
+                                android:id="@+id/v1"
+                                android:layout_height="20dp"
+                                android:layout_width="0.5dp"
+                                android:background="@color/Gray"/>
+
+                            <TextView
+                                android:layout_toRightOf="@+id/v1"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/like_count"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="like"/>
+
+
+                        </RelativeLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <include
+                        layout="@layout/detail_matches_about_block"/>
+                    <!--end about-->
+
+                    <!--education career-->
+                    <include
+                        layout="@layout/detail_matches_education_career_block"/>
+                    <!--end education career-->
+
+                    <!--conversation_and_background_family-->
+                    <include layout="@layout/detail_matches_conversation_and_background_block" />
+
+                    <!--end conversation_and_background_family-->
+
+
+
+                    <!--<LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/view_all_detail"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/curve_blue_btn_bg"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="View All Detail "
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/p1"
+                            android:layout_height="20dp"
+                            android:layout_width="20dp"
+                            />
+
+
+                    </LinearLayout>-->
+
+                    <!--contact-->
+                    <include
+                        layout="@layout/detail_matches_contact_block"
+                       />
+                    <!--contact-->
+
+
+                    <!--go premium to view full profile-->
+                    <include
+                        layout="@layout/detail_matches_go_premium_to_view_profile_layout" />
+                    <!--end go premium to view full profile-->
+
+
+
+
+                    <!--matches_lifestyle_appearance-->
+                    <include
+                        layout="@layout/detail_matches_lifestyle_appearance_block"/>
+                    <!--end matches_lifestyle_appearance-->
+
+                    <!--other basic block-->
+                    <include
+                        layout="@layout/detail_matches_other_basic_block"/>
+                    <!--end other basic block-->
+
+
+                    <!--conversation_and_background_family-->
+<!--
+                    <include layout="@layout/detail_matches_conversation_and_background_family_block" />
+-->
+
+                    <!--end conversation_and_background_family-->
+
+
+                    <!--education career-->
+                   <!-- <include
+                        layout="@layout/detail_matches_education_career_block"/>-->
+                    <!--end education career-->
+
+                    <!--education career-->
+                    <include
+                        layout="@layout/detail_matches_partner_pref_block"/>
+                    <!--end education career-->
+
+
+
+                    <!--address-->
+                    <include
+                        layout="@layout/detail_matches_address_block"/>
+                    <!--address-->
+
+
+                    <!--partner preferences-->
+                    <include
+                        layout="@layout/detail_matches_partner_preferences_block"
+                       />
+                    <!--end partner preferences-->
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/view_all_detail"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="View All Detail "
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/p1"
+                            android:layout_height="20dp"
+                            android:layout_width="20dp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            <!--bottom connect now layout-->
+            <LinearLayout
+                android:id="@+id/bottom_like_connectLL"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:background="@color/SlateGray"
+                android:layout_alignParentBottom="true"
+                android:weightSum="2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textStyle="italic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"
+                    android:text="Like this Profile?"/>
+
+                <LinearLayout
+                    android:id="@+id/connect_btn_bottomLL"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/connect_btn_bottom_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text=""/>
+
+                    <ImageView
+                        android:id="@+id/connect_now_btn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_checklist"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <!-- end bottom connect now layout-->
+
+
+
+            <!--bottom contact layout-->
+            <LinearLayout
+                android:id="@+id/bottom_contactLL"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@color/SlateGray"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/chat_btn1"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/curve_darkblue_btn_bg"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_width="21dp"
+                                android:layout_height="21dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_baseline_message_24_white"
+                                />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:text="Chat"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/whatapp_btn1"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+
+                        <ImageView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/whatsapp" />
+
+
+
+
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:text="Whatsapp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/call_btn1"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/curve_b_btn_bg"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/white_phone"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:text="Call"/>
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <!-- end bottom contact layout-->
+
+            <!--internet code-->
+            <include
+                layout="@layout/internet_layout"/>
+            <!--end internet code-->
+
+
+            <!--swip top layout-->
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/swip_topLL"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_marginTop="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="5dp">
+
+
+                    <LinearLayout
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="17dp"
+                        android:paddingLeft="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_baseline_arrow_upward_24"
+                            />
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/swip_name_top"
+                            android:layout_marginLeft="2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/sky_btn"
+                            android:text="Test"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <!--swip top layout-->
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/next_profile"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|end"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/fab_half_moon"
+            android:elevation="8dp"
+            android:translationZ="8dp"
+            android:scaleX="-1"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Right Floating Half-Moon Button -->
+        <ImageView
+            android:id="@+id/back_profile"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|start"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/fab_half_moon"
+            android:elevation="8dp"
+            android:translationZ="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:background="@drawable/dialog_bg"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="30dp"
+    android:paddingLeft="10dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/msg_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/Red"
+        android:textStyle="bold" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/edit_profile_btn"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+
+
+
+
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/call_btn"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="OK"
+            android:textAllCaps="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

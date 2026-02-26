@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/app_bar_layout"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="1dp"
+                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/e_book"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Payment for the registration of Ebook"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="एप पर किया गया वधु-वर परिचय रजिस्टर को पुस्तिका में प्रकाशित करें। बहुत से लोगों ने पहले ही रजिस्ट्रेशन कर लिया है।"/>
+
+                <!--                <TextView-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:textSize="12sp"-->
+                <!--                    android:textColor="@color/Gray"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="एप पर किया गया वधु–वर परिचय अब पुस्तिका में भी प्रकाशित किया जाएगा।-->
+                <!--बहुत से लोग पहले ही रजिस्टर कर चुके हैं और अपनी जगह सुरक्षित कर ली है।-->
+                <!--Limited Seats! मौका न चूकें — आज ही सीट बुक कीजिए!" />-->
+
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/ebok_rv"
+                    android:layout_margin="10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="10dp"
+                    android:id="@+id/premiumCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="4dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/premium_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Premium Matches"
+                            android:textColor="@color/description_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            android:text="Recently upgraded Premium members"
+                            android:textColor="@color/Gray"
+                            android:textSize="15sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/premium_rv"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:nestedScrollingEnabled="false"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/progress_bar_premium"
+                            android:layout_width="match_parent"
+                            android:layout_height="210dp"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/see_all_premium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10dp"
+
+                            android:text="See All"
+                            android:textColor="@color/pharma"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ProgressBar
+                        android:layout_centerInParent="true"
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"/>
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/empty_ebookLL"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_height="100dp"
+                        android:layout_width="100dp" />
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="E-Book Not Available !"
+                        android:textColor="@color/description_text"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:elevation="4dp"
+    android:layout_marginBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/partner_preferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/o1"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/partner"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Partner Preferneces"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/contact_filter"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/o2"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_filter"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Filters"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:id="@+id/account_Setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/o3"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/setting"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Setting"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:id="@+id/account_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+            <ImageView
+                android:id="@+id/o7"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/baseline_attach_money_24"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Transaction"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/help_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/o4"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/help"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help &amp; Support"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/rating_image"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rating_image11"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/rating_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Rating"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:id="@+id/notification_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
+            <!-- Left icon -->
+            <ImageView
+                android:id="@+id/notification_image"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/notification_image"
+                android:scaleType="centerInside" />
+
+            <!-- Text container (Title + Description) -->
+            <LinearLayout
+                android:id="@+id/text_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/notification_image"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/notification_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification Setting"
+                    android:textColor="@color/description_text"
+                    android:textSize="16dp"/>
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/notification_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get notified about profile views, requests, declines &amp; messages."
+                    android:textColor="@color/description_text"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <!-- Right arrow icon -->
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+        </RelativeLayout>
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/o5"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/notifications"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textColor="@color/description_text"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="22dp"
+
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rate_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/o6"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rate"
+                android:scaleType="centerInside" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/o6"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate the App"
+                    android:textColor="@color/description_text"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Make your opinion count"
+                    android:textColor="@color/Gray"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray2" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

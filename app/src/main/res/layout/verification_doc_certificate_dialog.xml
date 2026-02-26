@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Add Verification Document"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittxt_gray_line_no_padding"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/verification_document_for_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/no_photo_available" />
+
+                <TextView
+                    android:id="@+id/edit_certificate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="5dp"
+                    android:text="Upload"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

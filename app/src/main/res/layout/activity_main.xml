@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <fragment-->
+    <!--        android:layout_marginBottom="57dp"-->
+    <!--        android:id="@+id/fragment_container"-->
+    <!--        class="androidx.navigation.fragment.NavHostFragment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:defaultNavHost="true"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/nav_view"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:navGraph="@navigation/mobile_navigation" />-->
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:navGraph="@navigation/mobile_navigation" />-->
+
+<!--    <fragment-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_marginBottom="57dp"-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/nav_view"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:navGraph="@navigation/mobile_navigation" />-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--internet code-->
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/Black"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="@drawable/back_ovalshape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/couldnt_reach_internet_txt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        android:layout_marginBottom="100dp"
+        android:text="internet couldn't reach!" />
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/internetOffRL"
+        android:background="@color/bgBottomNavigation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/connection_txt"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="No Connection" />
+
+
+        <TextView
+            android:id="@+id/try_again_txt"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            android:layout_marginRight="30dp"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            android:text="Try Again!" />
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:id="@+id/simpleProgressBar"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+    </RelativeLayout>
+    <!--end internet code-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

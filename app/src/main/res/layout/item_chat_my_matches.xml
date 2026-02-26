@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/male_avtar"
+        android:id="@+id/imgmyMatches"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/LightGrey"/>
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/online_iv"
+            android:layout_height="13dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="52dp"
+            android:layout_width="13dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_circle"
+               />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/online"
+                />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/namemyMatches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgmyMatches"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:singleLine="true"
+        android:text="fafdfad"
+        android:textSize="13sp" />
+</LinearLayout>

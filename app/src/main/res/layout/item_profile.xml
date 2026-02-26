@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginRight="10dp"
+    android:layout_width="180dp"
+    android:background="@drawable/edittxt_gray_line_no_padding"
+    android:layout_height="200dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:id="@+id/img"-->
+<!--                android:background="@color/LightGrey"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                />-->
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/default_Avtar_LL"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center_horizontal"
+                android:background="@color/gray1"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:adjustViewBounds="true"
+                    />
+                <TextView
+                    android:textColor="@color/Gray"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Photo not added"/>
+
+            </LinearLayout>
+
+
+            <com.WadhuWarProject.WadhuWar.extras.ProportionalImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                />
+
+
+
+
+            <FrameLayout
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_bg" >
+                <RelativeLayout
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <TextView
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:justificationMode="inter_word"
+                        android:id="@+id/name"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:justificationMode="inter_word"
+                        android:layout_below="@+id/name"
+                        android:id="@+id/occupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+
+
+
+
+        </FrameLayout>
+
+<!--        <TextView-->
+<!--            android:justificationMode="inter_word"-->
+
+<!--            android:id="@+id/occupation"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Getdsfasfdsfdfa 2 times more Matches"-->
+<!--            android:textColor="@color/Gray"-->
+<!--            android:textSize="15sp" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

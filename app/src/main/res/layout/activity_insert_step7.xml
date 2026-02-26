@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    tools:context=".activity.InsertStep7Activity">
+
+
+    <!--toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/logo2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold">
+
+            <include layout="@layout/progress_cutome_layout" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/DarkGray" />
+
+    </RelativeLayout>
+    <!--end toolbar-->
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:text="Thanks for Registering. Now let's build your profile"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Currently you have no verification document, "
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/skip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click here"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#6200EE"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/DarkGray" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="3dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="Upload Verification Documents / पडताळणी दस्तऐवज अपलोड करा"
+                            android:textColor="@color/main_color" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Add Verification Document"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/verification_document_for_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="Upload Verification Documents"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/upload_verification_doc_img_capture"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_add_a_photo_24" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                        <FrameLayout
+                            android:id="@+id/verification_doc_img_root"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="200dp">
+
+                            <ImageView
+                                android:id="@+id/verification_doc_img_photo"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/verification_doc_img_btn_close"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="end"
+                                android:background="@drawable/blue_cross"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_baseline_close_24"
+                                />
+
+                        </FrameLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="Education Certificate / शिक्षा प्रमाणपत्र"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/education_certificate_img_capture"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_add_a_photo_24" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/root"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+
+                            <ImageView
+                                android:id="@+id/img_photo"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/btn_close"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="end"
+                                android:background="@drawable/blue_cross"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_baseline_close_24"
+                                />
+
+                        </FrameLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Occupation Certificate / व्यवसाय प्रमाणपत्र"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/occupation_certificate_img_capture"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_add_a_photo_24" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                        <FrameLayout
+                            android:id="@+id/occupation_root"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="200dp">
+
+                            <ImageView
+                                android:id="@+id/occupation_img_photo"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/occupation_btn_close"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="end"
+                                android:background="@drawable/blue_cross"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_baseline_close_24"
+                                />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="20dp"
+                    android:text="ABOUT ME &amp; MEMBERSHIP / माझ्याबद्दल माहिती &amp; सदस्यता"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+                <!-- Card with EditText only -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="6dp">
+
+                    <EditText
+                        android:id="@+id/editAboutMe"
+                        android:hint="Write something about yourself..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:background="@null"
+                        android:maxLines="5"
+                        android:padding="12dp"
+                        android:textSize="16sp"/>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/continue_btn_bg"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+
+                        android:id="@+id/next_btn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONTINUE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <!--progress bar code-->
+                    <LinearLayout
+                        android:id="@+id/ProgressLL"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/next_btn_txt"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal" />
+
+                    </LinearLayout>
+                    <!--end progress bar code-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

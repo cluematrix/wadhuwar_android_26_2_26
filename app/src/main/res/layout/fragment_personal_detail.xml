@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/featurefragmentCor">
+
+
+    <FrameLayout
+        android:id="@+id/featurefragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:layout_marginTop="0dp">
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolbar_appbar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:contentInsetStartWithNavigation="0dp">
+
+                <RelativeLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <include
+                        layout="@layout/toolbar_design_2"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:id="@+id/sv_feature"
+            android:layout_marginTop="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/toolbar_design_1"/>
+
+
+                <!--top banenr img-->
+
+                <androidx.cardview.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="3dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/r1"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- end top banenr img-->
+
+                <!--form-->
+                <!--end form-->
+
+
+                <include
+                    android:id="@+id/registration_layout_first"
+                    android:visibility="gone"
+                    layout="@layout/registration_form1" />
+
+                <include
+                    android:id="@+id/registration_layout_second"
+                    android:visibility="gone"
+                    layout="@layout/registration_form" />
+
+                <include
+                    layout="@layout/find_your_partner_layout"/>
+
+                <include
+                    layout="@layout/couple_layout"/>
+
+                <include
+                    layout="@layout/about"/>
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.AccomodationDetailActivity">
+
+
+    <!--toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbar1"
+        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:background="@drawable/logo2"
+            />
+
+        <LinearLayout
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+            <include
+                layout="@layout/progress_cutome_layout"/>
+        </LinearLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/DarkGray"/>
+
+    </RelativeLayout>
+    <!--end toolbar-->
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Thanks for Registering. Now let's build your profile"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/DarkGray"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="3dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_marginTop="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="FAMILY DETAILS / पारिवारिक विवरण"
+                            android:textColor="@color/main_color" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Father Full Name"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/father_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:singleLine="true"
+
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Father occupation"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/fatheroccupation_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Father property"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/father_property"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Property location"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/property_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Property Type Name"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/property_type_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Father Mobile No / Whatsapp No"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:padding="8dp"
+                                android:background="@drawable/edittxt_for_nineone"
+                                android:enabled="false"
+                                android:text="+91"
+                                android:textSize="16sp" />
+                            <EditText
+                                android:id="@+id/father_mobile_no"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mother Full Name"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/mother_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:singleLine="true"
+
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mother Occupation"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/motheroccupation_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mother Mobile No / Whatsapp No"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:padding="8dp"
+                                android:background="@drawable/edittxt_for_nineone"
+                                android:enabled="false"
+                                android:text="+91"
+                                android:textSize="16sp" />
+                            <EditText
+                                android:singleLine="true"
+                                android:id="@+id/mother_mobile_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"                            android:inputType="number"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:maxLength="10"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Family Location"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/family_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Family Class"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                            <Spinner
+                                android:id="@+id/familyclass_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Family Type"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                            <Spinner
+                                android:id="@+id/familytype_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mama Full Name"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:singleLine="true"
+
+                            android:id="@+id/mama_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mama's Surnameekul"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:singleLine="true"
+
+                            android:id="@+id/mamekul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mama Mobile No"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:padding="8dp"
+                                android:background="@drawable/edittxt_for_nineone"
+                                android:enabled="false"
+                                android:text="+91"
+                                android:textSize="16sp" />
+                            <EditText
+                                android:singleLine="true"
+                                android:id="@+id/mama_mobile_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:inputType="number"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:maxLength="10"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Mama's Occupation"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/mamaoccupation_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Count Of Sibling"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/count_sibling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:inputType="number"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Name Of Sibling"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/name_sibling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Count Of Married Sibling"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/count_married_sibling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:inputType="number"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Sibling Occupation"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/sibingoccupation_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/continue_btn_bg"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+
+                        android:id="@+id/next_btn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONTINUE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <!--progress bar code-->
+                    <LinearLayout
+                        android:id="@+id/ProgressLL"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/next_btn_txt"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal" />
+
+                    </LinearLayout>
+                    <!--end progress bar code-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

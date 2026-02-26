@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:id="@+id/cv"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:text="aaaa"
+            android:textSize="12sp" />
+
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space">
+
+
+            <FrameLayout
+                android:layout_marginLeft="5dp"
+                android:id="@+id/profile_img_fm"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:foregroundGravity="center">
+<!--
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/circleViewOverlay"
+                    android:layout_width="108dp"
+                    android:background="@drawable/img_outer_circle"
+                    android:layout_height="108dp"
+                    android:layout_gravity="center" />
+
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/circleViewOverlay2"
+                    android:layout_width="105dp"
+                    android:background="@drawable/img_outer_circle_white"
+                    android:layout_height="105dp"
+                    android:layout_gravity="center" />-->
+
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center" />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/profile_img_fm"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text=""/>
+
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/description_text"
+                    android:layout_marginBottom="1dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/t2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/description_text"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/description_text"
+                    android:text=""/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/reject_btn"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="35dp">
+
+
+                        <ImageView
+                            android:id="@+id/reject_img"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/gray_circle_no_padding"
+                            android:src="@drawable/close_img" />
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/pb_decline"
+                            android:layout_height="46dp"
+                            android:layout_width="46dp">
+                            <ProgressBar
+                                android:id="@+id/progressBar_decl"
+                                android:layout_centerInParent="true"
+                                android:layout_height="30dp"
+                                android:layout_width="30dp"/>
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="7dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/Gray"
+                            android:text="Decline"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@+id/reject_btn"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <FrameLayout
+
+                        android:visibility="visible"
+                        android:id="@+id/accept_btn"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:foregroundGravity="center"
+                        android:gravity="center">
+
+                        <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                            android:id="@+id/c1"
+                            android:layout_width="36dp"
+                            android:background="@drawable/img_outer_circle_green"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center" />
+
+                        <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                            android:id="@+id/c2"
+                            android:layout_width="30dp"
+                            android:background="@drawable/img_outer_circle_white"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:gravity="center"
+                            android:background="@drawable/ic_checked"
+                            >
+
+                            <ImageView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/check_white"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </FrameLayout>
+
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/pb_accept"
+                        android:layout_height="48dp"
+                        android:layout_width="48dp">
+                        <ProgressBar
+                            android:id="@+id/progressBar_accept"
+                            android:layout_centerInParent="true"
+                            android:layout_height="30dp"
+                            android:layout_width="30dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="7dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/Gray"
+                        android:text="Accept"/>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="3dp"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:background="@drawable/bg_gradient"
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_below="@id/amount"
+                android:text="Limited Seats Only!"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pay_btn"
+                android:layout_gravity="end"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="Pay"
+                android:textColor="@color/white"
+                android:background="@drawable/curve_green_btn_bg"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

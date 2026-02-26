@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/app_bar_layout"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:layout_height="180dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/melava"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register for Melava"
+                android:layout_centerVertical="true"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/melava_rv"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/progress_bar"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+                <ProgressBar
+                    android:layout_centerInParent="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"/>
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/empty_melavaLL"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:background="@drawable/ic_holding_hands"/>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Melava Not Available !"
+                    android:textColor="@color/description_text"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
+

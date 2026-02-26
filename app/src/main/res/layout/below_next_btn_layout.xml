@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginBottom="40dp"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_people_outline_24"
+            android:background="@drawable/gray_circle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Best Matches  "
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/Gray"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_mail_outline_24"
+            android:background="@drawable/gray_circle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Max Response"
+            android:textSize="15sp"
+
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/Gray"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_outline_lock_24"
+            android:background="@drawable/gray_circle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:text="Fully Secure    "
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/Gray"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

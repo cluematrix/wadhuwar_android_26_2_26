@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/justjoinL"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:elevation="1dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="0dp"
+    app:strokeColor="@color/Red"
+    app:strokeWidth="1dp"
+    android:layout_marginTop="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"
+        android:textColor="@color/Red"
+        android:text="  JUST JOINED!      "/>
+
+</androidx.cardview.widget.CardView>

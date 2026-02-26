@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_marginTop="13dp"
+    android:background="@drawable/b"
+    android:layout_margin="11dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/description_text"
+            android:text="Basic Details"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@drawable/matches_basic_detail_green_oval"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/description_text"
+                        android:text="Created by Sibling"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/matches_basic_detail_green_oval"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/description_text"
+                        android:text="Profile ID-SH12345467890"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@drawable/matches_basic_detail_green_oval"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/description_text"
+                        android:text="27 yrs old"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/matches_basic_detail_green_oval"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/description_text"
+                        android:text="Height - 5'11"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/calender_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/calender"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/calender_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/age_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Birth Date"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/age_txt"
+                        android:id="@+id/born_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Born on **/**/***"/>
+
+                    <ImageView
+                        android:layout_below="@+id/age_txt"
+                        android:layout_toRightOf="@+id/born_txt"
+                        android:layout_height="18dp"
+                        android:layout_width="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/profile_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_person_24"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marital Status"
+                        android:textColor="@color/Gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Never Married"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/live_in_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_location_on_24"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/live_in_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Lives in"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Lives in Nagpur."/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/ic_book_education_tool"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/live_in_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Religion &amp; Mother Tongue"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Hindu, Marathi"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_circle" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_baseline_restaurant_menu_24" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/live_in_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Diet Preferences"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Non-Vegetarian"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/Gray"/>
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="To unlock Birth date"
+                android:textColor="@color/description_text"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/curved_rectangle_blue_border">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Go Premium Now"
+                    android:textSize="16sp"
+                    android:textColor="@color/pharma"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

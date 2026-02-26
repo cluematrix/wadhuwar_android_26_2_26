@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="7dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:id="@+id/cv"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/date"
+            android:text="26 july"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space">
+
+
+            <FrameLayout
+                android:id="@+id/profile_img_fm"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:foregroundGravity="center">
+
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/circleViewOverlay"
+                    android:layout_width="160dp"
+                    android:background="@drawable/img_outer_circle"
+                    android:layout_height="160dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/circleViewOverlay2"
+                    android:layout_width="156dp"
+                    android:visibility="gone"
+                    android:background="@drawable/img_outer_circle_white"
+                    android:layout_height="156dp"
+                    android:layout_gravity="center" />
+
+                <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/profile_img_fm"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text=""/>
+
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/DimGray"
+                    android:layout_marginBottom="1dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/t2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/DimGray"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/t3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/DimGray"
+                    android:text=""/>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:layout_gravity="right"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/option_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/lightgray_circle_progress"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/contactLL"
+
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <View
+
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/gray1"/>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/chat_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/curve_darkblue_btn_bg"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_baseline_message_24_white"
+                            />
+
+                    </LinearLayout>
+
+
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/Gray"
+                            android:text="Chat"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/whatapp_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/whatsapp" />
+
+
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/Gray"
+                        android:text="Whatsapp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/call_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/curve_b_btn_bg"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/white_phone"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/Gray"
+                        android:text="Call"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

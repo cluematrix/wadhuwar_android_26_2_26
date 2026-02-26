@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_report_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray1"
+                android:drawableLeft="@drawable/ic_baseline_flag_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text="You are raising a compliant against *** with Dr-Wadhu War team"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/list_of_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/fake_profile_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Fake / Misleading Profile Information"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/multiple_profiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Multiple Profiles"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/phone_number_is_incorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Phone number is incorrect"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/photos_are_fake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Photos are fake or obscene"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/has_send_abusive_emails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Has send abusive Emails / Chats"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/is_already_married"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Is already married / engaged"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/asking_for_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Asking for money / Scammer"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/other_misuse_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Other misuse reasons"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_of_comment_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/it_spam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="It's spam"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/nudity_or_sexual_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Nudity or sexual activity"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/hate_speech_or_symbols"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Hate speech or symbols"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/violence_or_dangerous_organisations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Violence or dangerous organisations"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/intellectual_property_violation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Intellectual property violation"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/false_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="False information"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/i_just_dont_like_it"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="I just don't like it"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/something_else"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Something else"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/desc_report_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/report_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_report_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/report_name"
+                    android:scrollbars="vertical"
+                    android:background="@android:color/transparent"
+                    android:focusable="true"
+                    android:gravity="start"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="true"
+                    android:hint="Please provide us more details so that we can take appropriate action"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/Gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_rectangle_pink_border"
+                        android:text="Cancel"
+                        android:textColor="@color/main_color"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/btn_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_rectangle_pink_border"
+                        android:backgroundTint="@color/main_color"
+                        android:text="Report"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

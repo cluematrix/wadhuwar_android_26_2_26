@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_height="match_parent">
+
+    <!--toolbar-->
+    <include
+        layout="@layout/app_bar_layout"/>
+    <!--end toolbar-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accommodation Details"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp"
+                        />
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="3dp"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="3dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*"
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Marked fields are mandatory"
+                                    android:textColor="@color/description_text"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_height="0.5dp"
+                                android:layout_width="match_parent"
+                                android:background="@color/description_text"/>
+
+
+
+                            <TextView
+                                android:layout_marginTop="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:text="Current Details / वर्तमान विवरण"
+                                android:textColor="@color/main_color" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Current Address / वर्तमान पता"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*"
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+
+
+
+                            <EditText
+                                android:id="@+id/current_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Current Country/ वर्तमान देश"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*"
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/current_country_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Current State/ वर्तमान राज्य"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*"
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/current_state_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+
+
+
+                                <LinearLayout
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Current District/ वर्तमान जिल्हा"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <TextView
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="* "
+                                        android:textColor="@color/Red"
+                                        android:textSize="12sp"
+                                        />
+
+
+
+                                    <ProgressBar
+                                        android:visibility="gone"
+
+                                        android:indeterminateTint="@color/colorPrimary"
+                                        android:id="@+id/prog_district"
+                                        android:layout_height="20dp"
+                                        android:layout_width="20dp"
+                                        android:layout_gravity="center_vertical"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/current_district_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Current Tahsil/ वर्तमान तालुका"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:layout_gravity="center_horizontal"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:text="* "-->
+                                    <!--                                        android:textColor="@color/Red"-->
+                                    <!--                                        android:textSize="12sp"-->
+                                    <!--                                        />-->
+
+
+                                    <ProgressBar
+                                        android:visibility="gone"
+
+                                        android:indeterminateTint="@color/colorPrimary"
+                                        android:id="@+id/prog_taluka"
+                                        android:layout_height="20dp"
+                                        android:layout_width="20dp"
+                                        android:layout_gravity="center_vertical"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                <EditText
+                                    android:id="@+id/current_taluka"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:inputType="text"
+                                    android:background="@android:color/transparent" />
+                            </LinearLayout>
+
+
+
+                            <!--                            <LinearLayout-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_marginTop="8dp"-->
+                            <!--                                android:orientation="vertical"-->
+                            <!--                                android:background="@drawable/edittxt_gray_line_no_padding">-->
+                            <!--                                <Spinner-->
+                            <!--                                    android:id="@+id/current_taluka_spinner"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    />-->
+                            <!--                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Current Village/ वर्तमान गाँव"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*"
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+
+
+                            <EditText
+                                android:id="@+id/current_village"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:textSize="15dp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="3dp"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="3dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:layout_marginTop="12dp"
+                                android:id="@+id/checkBox1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Same as Above"
+                                android:onClick="onCheckBoxClick"
+                                android:layout_centerHorizontal="true" />
+
+
+                            <TextView
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/main_color"
+                                android:text="Permanent Details / स्थायी विवरण"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/DarkGray"
+                                android:text="Permanent Address / स्थायी पता"/>
+
+                            <EditText
+                                android:id="@+id/permanent_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:textSize="15dp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="Permanent Country/ स्थायी देश"
+                                android:textColor="@color/DarkGray"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/permant_country_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="Permanent State/ स्थायी राज्य"
+                                android:textColor="@color/DarkGray"
+                                android:textSize="14dp" />
+
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/permant_state_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="13dp"
+                                    android:text="Permanent District/ स्थायी जिला"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="14dp" />
+
+
+
+                                <ProgressBar
+                                    android:visibility="gone"
+
+                                    android:indeterminateTint="@color/colorPrimary"
+                                    android:id="@+id/prog_per_district"
+                                    android:layout_height="20dp"
+                                    android:layout_width="20dp"
+                                    android:layout_gravity="center_vertical"/>
+
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+                                <Spinner
+                                    android:id="@+id/permant_district_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="13dp"
+                                    android:text="Permanent Tahsil/ स्थायी तालुका"
+                                    android:textColor="@color/DarkGray"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="* "
+                                    android:textColor="@color/Red"
+                                    android:textSize="12sp"
+                                    />
+
+
+
+                                <ProgressBar
+                                    android:visibility="gone"
+
+                                    android:indeterminateTint="@color/colorPrimary"
+                                    android:id="@+id/prog_per_taluka"
+                                    android:layout_height="20dp"
+                                    android:layout_width="20dp"
+                                    android:layout_gravity="center_vertical"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                <EditText
+                                    android:id="@+id/permanent_taluka"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:inputType="text"
+                                    android:background="@android:color/transparent" />
+                            </LinearLayout>
+                            <!--                            <LinearLayout-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_marginTop="8dp"-->
+                            <!--                                android:orientation="vertical"-->
+                            <!--                                android:background="@drawable/edittxt_gray_line_no_padding">-->
+                            <!--                                <Spinner-->
+                            <!--                                    android:id="@+id/permant_taluka_spinner"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    />-->
+                            <!--                            </LinearLayout>-->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="Permanent Village/ स्थायी गाँव"
+                                android:textColor="@color/DarkGray"
+                                android:textSize="14dp" />
+
+                            <EditText
+                                android:id="@+id/permant_village"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:textSize="15dp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/update_btn"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_blue_clr"
+                        android:layout_width="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1.5"
+                            android:text="Update"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <!--internet code-->
+
+            <include
+                layout="@layout/internet_layout"/>
+            <!--end internet code-->
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

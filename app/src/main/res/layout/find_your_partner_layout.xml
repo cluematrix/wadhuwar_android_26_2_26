@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="23dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="40dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/Gray"
+        android:textSize="23sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Find your Life Partner in 4 easy Steps!"/>
+
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_height="58dp"
+        android:layout_width="58dp"
+        android:gravity="center"
+
+        android:src="@drawable/ic_baseline_perm_identity_24"
+        android:background="@drawable/pink_circle"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Register"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/DarkGray"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Create your\nfree profile"
+        />
+
+
+
+
+      <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_height="58dp"
+        android:layout_width="58dp"
+          android:gravity="center"
+
+          android:src="@drawable/search_white"
+        android:background="@drawable/pink_circle"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Search"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/DarkGray"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+
+        android:text="View Profile as\nper your criteria"
+        />
+
+
+
+
+
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_height="58dp"
+        android:layout_width="58dp"
+        android:gravity="center"
+        android:src="@drawable/ic_baseline_message_24_white"
+        android:background="@drawable/pink_circle"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Connect"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/DarkGray"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+
+        android:text="Get in touch with\ninterested members"
+        />
+
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_height="58dp"
+        android:layout_width="58dp"
+        android:gravity="center"
+
+        android:src="@drawable/ic_twotone_favorite_border_24"
+        android:background="@drawable/pink_circle"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Meet"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/DarkGray"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+
+        android:text="Find the one\nfor you!"
+        />
+
+
+
+
+</LinearLayout>

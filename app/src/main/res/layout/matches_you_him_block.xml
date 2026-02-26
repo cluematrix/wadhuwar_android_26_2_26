@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_marginTop="13dp"
+    android:background="@drawable/b"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="70dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    app:layout_goneMarginTop="11dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <FrameLayout
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_height="180dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/back1">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="You and Him"/>
+
+            <LinearLayout
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:background="@drawable/back1">
+                <ImageView
+                    android:layout_height="100dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_width="100dp"
+                    android:background="@drawable/profile"/>
+
+                <ImageView
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:background="@drawable/profile"/>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/thumb_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/white_circle" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_baseline_thumb_up_24" />
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/description_text"
+            android:text="You Match 7 of his Preferenes"/>
+
+        <LinearLayout
+            android:layout_height="50dp"
+            android:layout_width="match_parent"/>
+
+
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/description_text"
+            android:text="Common between the both of you"/>
+
+
+        <RelativeLayout
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="12dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/commom_img"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/description_text"
+                android:text="You both are from the Hindi  Community "/>
+
+
+            <FrameLayout
+                android:layout_alignParentLeft="true"
+                android:id="@+id/commom_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/purple_circle" />
+
+                <ImageView
+                    android:layout_width="19dp"
+
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/commom" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

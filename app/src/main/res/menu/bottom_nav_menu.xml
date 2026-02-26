@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_myshaddi"
+        android:icon="@drawable/profile_24"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/navigation_mathces"
+        android:icon="@drawable/ic_baseline_people_outline_24"
+        android:title="Matches" />
+
+
+    <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/ic_baseline_mail_outline_24"
+        android:title="Inbox" />
+
+
+    <item
+        android:id="@+id/navigation_melava"
+        android:icon="@drawable/ic_rings"
+        android:title="Melava" />
+</menu>

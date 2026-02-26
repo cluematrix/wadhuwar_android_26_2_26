@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AccomodationDetailActivity"
+    android:orientation="vertical">
+
+
+    <!--toolbar-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/logo2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold">
+
+            <include layout="@layout/progress_cutome_layout" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/DarkGray" />
+
+    </RelativeLayout>
+    <!--end toolbar-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Thanks for Registering. Now let's build your profile"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/DarkGray" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="3dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="CARRER DETAILS"
+                            android:textColor="@color/main_color" />
+
+
+                        <!--new changes 12-7-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Education Type/ शिक्षणाचा प्रकार"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/education_type_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Education / शिक्षण"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/highest_education_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <!--new changes 12-7-->
+
+                        <!-- <TextView
+                             android:visibility="gone"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="13dp"
+                             android:text="Highest Education/ उच्च शिक्षा"
+                             android:textColor="@color/Gray"
+                             android:textSize="14dp" />
+
+
+                         <LinearLayout
+                             android:visibility="gone"
+
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="8dp"
+                             android:background="@drawable/edittxt_gray_line_no_padding"
+                             android:orientation="vertical">
+
+                             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                 android:id="@+id/highest_education_spinner"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content" />
+
+                         </LinearLayout>
+ -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Other Education"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+
+                            android:id="@+id/other_education"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="College Name"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+
+                            android:id="@+id/college_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <!--new changes 12-7-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Occupationn Type/ व्यवसाय प्रकार"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/occupation_type_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <!--new changes 12-7-->
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Occupation/ व्यवसाय"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/occupation_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Post Name"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/post_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Office Address"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/office_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Office Location Name/ कार्यालय स्थान का नाम"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/office_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Office Country/ कार्यालय देश"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/office_country_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Office State/ कार्यालय राज्य"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/office_state_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Office District/ कार्यालय जिला"
+                                android:textColor="@color/Gray"
+                                android:textSize="14dp" />
+
+                            <ProgressBar
+                                android:id="@+id/prog_off_district"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:indeterminateTint="@color/colorPrimary"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/office_district_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Yearly Salary/ वार्षिक वेतन"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/salary_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="3dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="OTHER ATTRIBUTES / अन्य गुण"
+                            android:textColor="@color/main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Birth Time / जन्म समय"
+                            android:textColor="@color/Gray"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/birth_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:drawableRight="@drawable/ic_baseline_watch_later_24"
+                            android:padding="9dp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Manglik / मांगलिक"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/manglik_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Hobbies / शौक"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/hobbies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Marital Status/ वैवाहिक स्थिति"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/marital_status_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/other_LL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No. Of Children / बच्चो कि संख्या"
+                                android:textColor="@color/Gray"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line_no_padding"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/num_childred_spinner"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="Children Living Status / बच्चे कहाँ रहते है"
+                                android:textColor="@color/Gray"
+                                android:textSize="14dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line_no_padding"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/childred_living_spinner"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="Children Age / बच्चो कि उम्र"
+                                android:textColor="@color/Gray"
+                                android:textSize="14dp" />
+
+
+                            <EditText
+                                android:id="@+id/children_age"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+                                android:textSize="15dp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Dietary / पथ्य"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/dietary_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Lifestyle/ जीवन शैली"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/lifestyle_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Height/ ऊंचाई"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/height_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Weight/ वजन"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+                            <Spinner
+                                android:id="@+id/weight_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Gotra/ गोत्र"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <EditText
+                            android:id="@+id/gotra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edittxt_gray_line"
+                            android:padding="9dp"
+                            android:singleLine="true"
+
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Color-Complex/ रंग"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/colorcomplex_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Blood Group"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/bloodgroup_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="Handicap / अपंगता"
+                            android:textColor="@color/Gray"
+                            android:textSize="14dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/edittxt_gray_line_no_padding"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/handicap_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/disability_name_LL"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disability Name"
+                                android:textColor="@color/Gray"
+                                android:textSize="14dp" />
+
+
+                            <EditText
+                                android:id="@+id/disbility_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittxt_gray_line"
+                                android:padding="9dp"
+
+                                android:textSize="15dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/continue_btn_bg"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+
+                        android:id="@+id/next_btn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONTINUE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <!--progress bar code-->
+                    <LinearLayout
+                        android:id="@+id/ProgressLL"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/next_btn_txt"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal" />
+
+                    </LinearLayout>
+                    <!--end progress bar code-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

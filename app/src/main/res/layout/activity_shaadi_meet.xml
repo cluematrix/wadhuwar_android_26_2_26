@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/gray2"
+    android:layout_height="match_parent">
+
+    <!--toolbar-->
+    <include
+        layout="@layout/app_bar_layout"/>
+    <!--end toolbar-->
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray2"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Who can start a Meet with you"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Only Premium Members"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:id="@+id/edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit "
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/sky_btn" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/LightGrey"/>
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Your availability"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10am to 1pm, everyday"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:id="@+id/edit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit "
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/sky_btn" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

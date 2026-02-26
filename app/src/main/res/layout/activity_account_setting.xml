@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:background="@color/gray2"
+    android:orientation="vertical">
+
+    <!--toolbar-->
+    <include layout="@layout/app_bar_layout" />
+    <!--end toolbar-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray2"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/b"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/alertsRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Alerts"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Push Notifications &amp; Sounds"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="15dp"
+                            android:text="Contact Privacy"
+                            android:textColor="@color/Black"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/mobileRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="1234567890"
+                                    android:textColor="@color/description_text"
+                                    android:textSize="15sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Visible to all Premium Members"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/emailRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="xxx@gmail.com"
+                                    android:textColor="@color/description_text"
+                                    android:textSize="15sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Edit your Email Id"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/shadi_meetRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Shadi Meet"
+                                    android:textColor="@color/description_text"
+                                    android:textSize="15sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Edit your Meet Preferences"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/contact_filter_RL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Contact Filters"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                                <TextView
+                                    android:id="@+id/mobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Filter Profiles who can contact you"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/verification_badge_RL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="10dp"
+                                        android:text="Verification Badge"
+                                        android:textColor="@color/Black"
+                                        android:textSize="20sp" />
+
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@drawable/ic_shield" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Visible to all members"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/date_birth_RL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Date of Birth"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Show my full Date of Birth(dd/mm/yyyy)"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Messages"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="28dp"
+                                    android:text="Edit message for Connects, Accepts and Reminders"
+                                    android:textColor="@color/Gray"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/hide_delete_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="visible">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Delete Profile"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="visible" />
+
+                        // Hide profile  created by tanmay 18-2-2025
+                        <RelativeLayout
+                            android:id="@+id/hide_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="visible">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Hide Profile"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="50dp"
+                                android:id="@+id/unhide_profile1"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/switch_on_on"
+                                app:cardCornerRadius="20dp"
+                                android:backgroundTint="@color/black"
+                                android:padding="5dp">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="start|center_vertical"
+                                    app:cardCornerRadius="10dp"
+                                    android:backgroundTint="@color/white"/>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/unhide_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="visible">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Hide Profile"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="50dp"
+                                android:id="@+id/hide_profile1"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/switch_on_on"
+                                app:cardCornerRadius="20dp"
+                                android:backgroundTint="@color/Green"
+                                android:padding="5dp">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    app:cardCornerRadius="10dp"
+                                    android:backgroundTint="@color/white"/>
+                            </androidx.cardview.widget.CardView>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/logoutRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Logout"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/deleteRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="25dp"
+                                    android:text="Delete Profile"
+                                    android:textColor="@color/Black"
+                                    android:textSize="20sp" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/LightGrey"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

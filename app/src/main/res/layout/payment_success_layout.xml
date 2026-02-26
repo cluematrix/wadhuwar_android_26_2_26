@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <!--payment success-->
+    <LinearLayout
+        android:background="@color/CornflowerBlue"
+        android:id="@+id/successLL"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_check"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_placed_image"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Payment Successfull !"
+            />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/order_placed_txt"
+            android:text="done"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/curve_gray_btn_bg"
+
+            />
+
+    </LinearLayout>
+    <!--end payment success-->
+
+
+    <!--payment failure-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/failureLL"
+        android:orientation="vertical"
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_cancel"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_placed_image"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Transaction Failure !"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_placed_image"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/Gray"
+            android:text="Please try again."
+            />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/order_placed_txt"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/curve_gray_btn_bg"
+
+            />
+
+    </LinearLayout>
+    <!--payment failure-->
+
+
+    <!--api failure-->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/apiFailureLL"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/upgradedLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingTop="11dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="11dp">
+
+            <LinearLayout
+                android:id="@+id/connecy_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/ic_checked"
+                >
+
+                <ImageView
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/check_white"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_placed_image"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="  Transaction successfull"
+                />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_placed_image"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/Red"
+            android:text="Error : System Issue"
+            />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_placed_image"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/DimGray"
+            android:text="Due to some technical issue, your premium status is not updated. Please contact to admin."
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/callLL"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/edittxt_gray_line_no_padding"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_placed_image"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="Click here to call"
+                />
+            <View
+                android:layout_gravity="center_horizontal"
+
+                android:layout_height="0.5dp"
+                android:layout_width="110dp"
+                android:background="@color/sky_btn"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/blue_phone"
+                    />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/order_placed_image"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="9420944984"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/order_placed_txt"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/curve_gray_btn_bg"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+

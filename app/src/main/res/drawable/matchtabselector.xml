@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/Red"     android:state_enabled="false" />
+
+    <item android:drawable="@color/CornflowerBlue" android:state_selected="true"/>
+
+    <item android:drawable="@android:color/transparent" android:state_selected="false"/>
+
+
+</selector>
+<!--
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/Red" />
+        </shape>
+    </item>
+
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</selector>-->

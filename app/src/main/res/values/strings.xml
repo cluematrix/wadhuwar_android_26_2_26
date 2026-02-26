@@ -1,0 +1,45 @@
+<resources>
+    <declare-styleable name="BlurImageView">
+        <attr name="radius1" format="integer" />
+    </declare-styleable>
+    <string name="please_enter_your_number">Please enter your mobile number</string>
+    <string name="please_enter_the_otp_we">Please Enter the Otp below we sent on </string>
+    <string name="app_name">WadhuWar</string>
+    <string name="title_activity_comment_success_story">CommentSuccessStoryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="youAreNotUpdatedMessage">A new version of Wadhu-War is available. Please update to version\s</string>
+    <string name="youAreNotUpdatedMessage1">\s now</string>
+    <string name="update">Update</string>
+
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
+    <string name="profileHelp">Adding details to your profile lets you control and enhance how others see your profile</string>
+    <string name="stepstoEdit">Steps to edit profile details on Wadhuwar App: </string>
+    <string name="steps1Pro">1. Click on the My Profile tab available at second-bottom corner of the Main screen.</string>
+    <string name="steps2Pro">2. Then Click on Edit option available next to your Profile ID.</string>
+    <string name="steps3Pro">3. You get an option to edit your profile details category-wise
+        (Basic info, About Myself section, Religious background, etc.)</string>
+    <string name="notePro">Please note that critical details like Religion, Community, Date of Birth, Gender, Height, Martials status
+    and Mother tongue can be changed only once after profile registration.</string>
+    <string name="editbtnPro">To edit your profile, click on the button below: </string>
+
+    <string name="memHelp">Upgrade to any of our Membership Plans and we guarantee you will find a match!</string>
+
+    <string name="premiumHelp">Benifits of Premium Memberships:</string>
+    <string name="premiumHead">Premium Membership helps you directly initiate a conversation with your matches and
+    exchange information to proceed. As a Premium member, you have the following benefits:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

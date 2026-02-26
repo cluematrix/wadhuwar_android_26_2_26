@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_marginTop="13dp"
+    android:background="@drawable/b"
+    android:layout_margin="11dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/description_text"
+            android:text="Career &amp; Education"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/calender_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/profession"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/calender_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/age_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Profession"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/age_txt"
+                        android:id="@+id/born_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="Physician Assisatant with a private company"/>
+
+                    <ImageView
+                        android:layout_below="@+id/age_txt"
+                        android:layout_toRightOf="@+id/born_txt"
+                        android:layout_height="18dp"
+                        android:layout_width="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/company_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/company"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/company_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/company_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Company Name"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/company_txt"
+                        android:id="@+id/company"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="************"/>
+
+                    <ImageView
+                        android:layout_below="@+id/company_txt"
+                        android:layout_toRightOf="@+id/company"
+                        android:layout_height="18dp"
+                        android:layout_width="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/profile_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/annual_income"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Annual Income"
+                        android:textColor="@color/Gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Earns upto INR ! Lakh annually"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/live_in_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/qualification"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/live_in_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Highest Qualification"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Enginnering Diploma"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/education"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/live_in_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="Education Feild"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="Engineering"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/college_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yellow_circle" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/college"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/college_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/college_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/Gray"
+                        android:text="College Name"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/college_txt"
+                        android:id="@+id/college"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:text="*********"/>
+
+                    <ImageView
+                        android:layout_below="@+id/college_txt"
+                        android:layout_toRightOf="@+id/college"
+                        android:layout_height="18dp"
+                        android:layout_width="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/Gray"/>
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="To unlock Company &amp; College Name"
+                android:textColor="@color/description_text"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/curved_rectangle_blue_border">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Go Premium Now"
+                    android:textSize="16sp"
+                    android:textColor="@color/pharma"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

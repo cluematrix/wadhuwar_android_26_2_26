@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/app_bar_layout"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Based on your profile details and Partner Preferences, WadhuWar.com shows you a list of profiles under 'Matches' list."
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1) New Macthes: New members  who recently joined Wadhuwar.com and match your preference."
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2) My Matches: Members who exactly match your 'Partner Preferences'. Turn Off the toggle button include."
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3) Premium Matches: Your matches who recently upgraded to Premium Membership."
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4) Members you may like: Members who match most of your preferences. It gives you more matches to look out for."
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

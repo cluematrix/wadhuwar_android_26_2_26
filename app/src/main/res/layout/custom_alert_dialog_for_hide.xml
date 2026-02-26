@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/DarkRed"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/alertMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:letterSpacing="0.035"
+        android:lineSpacingExtra="5dp"
+        android:text="Please Unhide Your Profile First \n To see other profiles"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="wrap_content"
+            android:text="OK"
+            android:background="@drawable/rounded"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <!--toolbar-->
+    <include
+        layout="@layout/app_bar_layout_white"/>
+    <!--end toolbar-->
+
+    <View
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="@color/Gray"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginBottom="55dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/progress_bar"
+                        android:layout_height="210dp"
+                        android:layout_width="match_parent">
+                        <ProgressBar
+                            android:layout_centerInParent="true"
+                            android:layout_height="30dp"
+                            android:layout_width="30dp"/>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/comment_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:nestedScrollingEnabled="false"
+                           />
+
+
+
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/Gray"/>
+
+
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/Gray"/>
+
+                <TextView
+                    android:id="@+id/write_commnet_block"
+                    android:padding="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:justificationMode="inter_word"
+                    android:background="@color/trans"
+                    android:textColorHint="@color/sky_btn"
+                    android:hint="Write Comment... "
+                    android:textSize="16sp" />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

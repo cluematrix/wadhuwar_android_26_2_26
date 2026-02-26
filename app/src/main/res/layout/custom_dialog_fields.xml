@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/religionLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Religion"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/religionEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/buttonshape"
+                android:textAlignment="center"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/genderLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Gender"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/genderEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/buttonshape"
+                android:textAlignment="center"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/occupationLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Occupation"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/occupationEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:background="@drawable/buttonshape"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/yearlySalaryLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Yearly Salary"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/yearlySalaryEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/poppins"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/maritalStatusLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Marital Status"
+                android:textSize="16sp"
+                android:layout_weight="0.2"
+                android:padding="5dp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/maritalEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/highestQualificationLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:text="Highest Qualification"
+                android:textSize="16sp"
+                android:layout_weight="0.2"
+                android:padding="5dp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/qualificationEdit"
+                android:layout_width="match_parent"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/buttonshape"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

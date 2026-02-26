@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:padding="20dp"
+    android:layout_margin="10dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/Red"
+        android:text="For Contact! Upgrade Your Plan"/>
+
+
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/bottom_contactLL"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/chat_btn1"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/curve_darkblue_btn_bg"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_baseline_message_24_white"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:text="Chat"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whatapp_btn1"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/whatsapp" />
+
+
+
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:text="Whatsapp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/call_btn1"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/curve_b_btn_bg"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/white_phone"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:text="Call"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="@color/Gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_box"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/sky_btn"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/upgrade_now_btn"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_blue_btn_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upgrade Now"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/container"
+    android:layout_height="match_parent">
+
+    <!--toolbar-->
+
+    <include
+        layout="@layout/app_bar_layout"/>
+    <!--end toolbar-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <RelativeLayout
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Profiles you Recently Viewed "
+                    android:textColor="@color/description_text"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/emptyLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/no_data" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:gravity="center"
+                        android:text="Your Data is empty!"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/pb"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ProgressBar
+                        android:layout_centerInParent="true"
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"/>
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/premium_just_joines_box" />
+
+                <include
+                    layout="@layout/premium_new_update_box" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rv"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"/>
+
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!--swip top layout-->
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/swip_topLL"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp">
+
+
+                <LinearLayout
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="17dp"
+                    android:paddingLeft="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_baseline_arrow_upward_24"
+                        />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/swip_name_top"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pharma_dark"
+                        android:text="Go To Top"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--swip top layout-->
+
+
+
+        <!--internet code-->
+
+        <include
+            layout="@layout/internet_layout"/>
+        <!--end internet code-->
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_height="match_parent">
+
+
+    <!--toolbar-->
+    <include
+        layout="@layout/app_bar_layout"/>
+    <!--end toolbar-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Education &amp; Career"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp"
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/b"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="3dp"
+                        app:cardCornerRadius="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:paddingRight="13dp"
+                                android:paddingLeft="5dp"
+                                android:layout_height="match_parent">
+
+
+                                <!--new chnages 12/7-->
+                                <LinearLayout
+                                    android:layout_marginTop="13dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Education Type"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/education_type_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="13dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Education"
+                                            android:textColor="@color/DarkGray"
+                                            android:textSize="15sp" />
+
+
+                                        <ProgressBar
+                                            android:visibility="gone"
+
+                                            android:indeterminateTint="@color/colorPrimary"
+                                            android:id="@+id/prog_off_education"
+                                            android:layout_height="20dp"
+                                            android:layout_width="20dp"
+                                            android:layout_gravity="center_vertical"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/highest_education_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <!--new chnages 12/7-->
+
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:layout_marginTop="13dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Highest Education"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+
+                                    <LinearLayout
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <AutoCompleteTextView
+                                            android:layout_width="match_parent"
+                                            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                                            android:textSize="15dp"
+                                            android:textColor="@color/black"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/auto_complete_bg" />
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Other Education"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/other_education"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittxt_gray_line"
+                                        android:padding="8dp"
+                                        android:textSize="15dp" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="College Name"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/college_name"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittxt_gray_line"
+                                        android:padding="8dp"
+                                        android:textSize="15dp" />
+
+                                </LinearLayout>
+
+
+                                <!--new chnages 12/7-->
+                                <LinearLayout
+                                    android:layout_marginTop="13dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Occupation Type"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/occupation_type_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+                                <!--new chnages 12/7-->
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Occupation"
+                                            android:textColor="@color/DarkGray"
+                                            android:textSize="15sp" />
+
+
+                                        <ProgressBar
+                                            android:visibility="gone"
+
+                                            android:indeterminateTint="@color/colorPrimary"
+                                            android:id="@+id/prog_off_occupation"
+                                            android:layout_height="20dp"
+                                            android:layout_width="20dp"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/occupation_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Post Name"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+
+
+                                    <EditText
+                                        android:id="@+id/post_name"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittxt_gray_line"
+                                        android:padding="8dp"
+                                        android:textSize="15dp" />
+
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Office Address"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+
+                                    <EditText
+                                        android:id="@+id/office_address"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittxt_gray_line"
+                                        android:padding="8dp"
+                                        android:textSize="15dp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Office Location"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+
+
+
+                                    <EditText
+                                        android:id="@+id/office_location"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittxt_gray_line"
+                                        android:padding="8dp"
+                                        android:textSize="15dp" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Office Country"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/office_country_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Office State"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/office_state_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Office District"
+                                            android:textColor="@color/DarkGray"
+                                            android:textSize="15sp" />
+
+
+                                        <ProgressBar
+                                            android:visibility="gone"
+
+                                            android:indeterminateTint="@color/colorPrimary"
+                                            android:id="@+id/prog_off_district"
+                                            android:layout_height="20dp"
+                                            android:layout_width="20dp"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/office_district_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:padding="8dp"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Yearly Salary"
+                                        android:textColor="@color/DarkGray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/salary_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                                <!--==============-->
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/update_btn"
+                                    android:paddingBottom="8dp"
+                                    android:paddingLeft="13dp"
+                                    android:paddingRight="13dp"
+                                    android:paddingTop="8dp"
+                                    android:layout_marginTop="13dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_blue_clr"
+                                    android:layout_width="wrap_content">
+                                    <TextView
+                                        android:layout_weight="1.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Update"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+            <!--internet code-->
+
+            <include
+                layout="@layout/internet_layout"/>
+
+            <!--end internet code-->
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

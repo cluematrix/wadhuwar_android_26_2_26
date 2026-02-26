@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:textColor="@color/description_text"
+            android:textSize="23sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Wadhu War -\nJoin members with photos"/>
+
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/Gray"
+            android:layout_height="wrap_content"
+            android:text=" By organizing Samaj Melava, all Samaj Wadhu-War Palak Parichay Melava is being registered through the social media website wadhuwar.com app. Register link on the bride link https: // wadhuwar. com publishes e-books in memorabilia of the introductory meeting for registered brides.
+            \nSamaj Bandhav Wadhu-War Samaj Wadhu-War Palak Parichay Melawa is being registered and a large number of people are appealing to take advantage of the program."
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/gray2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/Gray"
+            android:layout_height="wrap_content"
+            android:text="©2016 wadhuwar.com . All Rights Reserved | Design And Developed By  Cluematrix Technologies"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/circle_background"
+        android:foreground="@drawable/ic_right_arrow"
+        android:visibility="invisible"
+        android:foregroundGravity="center" />
+
+</LinearLayout>

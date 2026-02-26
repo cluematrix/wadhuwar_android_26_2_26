@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <View
+        android:id="@+id/view_blank"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bg_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/image_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <ImageView
+            android:id="@+id/close_btn"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/close_img_white"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/fm"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                android:id="@+id/circleViewOverlay2"
+                android:layout_width="112dp"
+                android:background="@drawable/img_outer_circle_white"
+                android:layout_height="112dp"
+                android:layout_gravity="center" />
+
+            <com.WadhuWarProject.WadhuWar.extras.RoundedImageView
+                android:padding="10dp"
+                android:id="@+id/img_box"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/fm"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Upgrade Now to get full access"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/credentials_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:padding="8dp"
+                    android:layout_margin="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/blue_phone" />
+
+
+                    <TextView
+                        android:id="@+id/contact_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/LightGrey"/>
+
+                <RelativeLayout
+                    android:padding="8dp"
+                    android:layout_margin="12dp"
+                    android:id="@+id/other_educationLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/whatsapp" />
+
+
+                    <TextView
+                        android:id="@+id/whatapp_no"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/LightGrey"/>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:padding="8dp"
+                    android:layout_margin="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_baseline_message_24" />
+
+
+                    <TextView
+                        android:id="@+id/chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+                </RelativeLayout>
+                <View
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/LightGrey"/>
+
+                <RelativeLayout
+                    android:padding="8dp"
+                    android:layout_margin="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/orange_mail" />
+
+
+                    <TextView
+                        android:id="@+id/mail"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ic_baseline_lock_24"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/credentials_card"
+
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/upgrade_now_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:background="@drawable/curve_blue_btn_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="View Plans"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

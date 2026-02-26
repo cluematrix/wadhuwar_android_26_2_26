@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <androidx.viewpager.widget.ViewPager
+
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="New Member? Register Here"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/register_btn"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_pharma_clr"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Register New Member"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+<!--                <com.viewpagerindicator.CirclePageIndicator-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:id="@+id/indicator"-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:padding="10dip"-->
+<!--                    app:centered="true"-->
+<!--                    app:fillColor="#AB0A0A0A"-->
+<!--                    app:pageColor="@color/LightGrey"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    app:snap="false" />-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center_horizontal"
+                android:background="@color/main_color"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Already have an account?"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/login_btn"
+                    android:background="@drawable/white_border"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Login"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

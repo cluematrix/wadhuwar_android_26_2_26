@@ -1,0 +1,2162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical">
+
+    <!--toolbar-->
+    <include layout="@layout/app_bar_layout" />
+    <!--end toolbar-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Partner Preferences"
+                        android:textColor="@color/description_text"
+                        android:textSize="16sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <!--Start marital status-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Marital Status"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="2.5"
+                                        android:padding="10dp"
+                                        android:visibility="gone"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:id="@+id/marital_status_spinner1"
+                                        android:text="Select Status"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/marital_status_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/marital_status_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginVertical="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap"
+                                        android:id="@+id/marital_status_flex"/>
+
+
+                                </LinearLayout>
+                                <!--end marital status-->
+                                <!--
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_marginTop="10dp"
+                                                                    android:orientation="horizontal"
+                                                                    android:padding="8dp"
+                                                                    android:weightSum="4">
+
+
+                                                                    <TextView
+                                                                        android:layout_width="0dp"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_gravity="center_horizontal"
+                                                                        android:layout_weight="1.5"
+                                                                        android:text="Marital Status"
+                                                                        android:textColor="@color/Gray"
+                                                                        android:textSize="15sp" />
+
+                                                                    <LinearLayout
+                                                                        android:layout_width="0dp"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_weight="2.5"
+                                                                        android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                            android:id="@+id/marital_status_spinner"
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content" />
+
+                                                                    </LinearLayout>
+
+
+                                                                </LinearLayout>
+                                -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Religion"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <!--                                    <LinearLayout-->
+                                    <!--                                        android:layout_width="0dp"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_weight="2.5">-->
+                                    <!--                                        <AutoCompleteTextView-->
+                                    <!--                                            android:id="@+id/religion_spinner"-->
+                                    <!--                                            android:layout_width="match_parent"-->
+                                    <!--                                            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
+                                    <!--                                            android:textSize="15dp"-->
+                                    <!--                                            android:textColor="@color/black"-->
+                                    <!--                                            android:layout_height="wrap_content"-->
+                                    <!--                                            android:hint="Religion "-->
+                                    <!--                                            android:background="@drawable/auto_complete_bg" />-->
+                                    <!--                                    </LinearLayout>-->
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/religion_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Cast"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/caste_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+<!--                                    <TextView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_gravity="center_horizontal"-->
+<!--                                        android:layout_weight="2.5"-->
+<!--                                        android:padding="10dp"-->
+<!--                                        android:background="@drawable/edittxt_gray_line_no_padding"-->
+<!--                                        android:id="@+id/caste_spinner1"-->
+<!--                                        android:text="Select Cast"-->
+<!--                                        android:textColor="@color/Gray"-->
+<!--                                        android:textSize="15sp" />-->
+                                </LinearLayout>
+
+                                <!--Start subcast-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Sub-Cast"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/sub_caste_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/sub_caste_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/sub_caste_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+
+                                </LinearLayout>
+                                <!--end subcast-->
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/step1_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_rectangle_pink_border"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="3dp"
+                            android:text="view More"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/step2_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Age From"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <!--                                    <LinearLayout-->
+                                    <!--                                        android:layout_width="0dp"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_weight="2.5">-->
+                                    <!--                                        <AutoCompleteTextView-->
+                                    <!--                                            android:id="@+id/agefrom_spinner"-->
+                                    <!--                                            android:layout_width="match_parent"-->
+                                    <!--                                            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
+                                    <!--                                            android:textSize="15dp"-->
+                                    <!--                                            android:textColor="@color/black"-->
+                                    <!--                                            android:layout_height="wrap_content"-->
+                                    <!--                                            android:hint="From "-->
+                                    <!--                                            android:background="@drawable/auto_complete_bg" />-->
+                                    <!--                                    </LinearLayout>-->
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/agefrom_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Age To"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/ageto_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Height From"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/height_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Height To"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/height_spinner_to"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:id="@+id/step2_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_rectangle_pink_border"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="3dp"
+                            android:text="view More"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/step3_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:cardCornerRadius="5dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <!--education-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Education Type"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/education_type_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/education_type_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/education_type_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/educationFlexBothLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Education"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/highest_education_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/education_flexLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+
+                                        <com.google.android.flexbox.FlexboxLayout
+                                            android:id="@+id/education_pckg_flex"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="5dp"
+                                            app:flexDirection="row"
+                                            app:flexWrap="wrap" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <!--end education-->
+
+                                <!--occupation type-->
+                                <!--education-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Occupation Type"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/occupation_type_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/occupation_type_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/occupation_type_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/occupationFlexBothLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Occupation"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/occupation_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/occupation_flexLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+                                        <com.google.android.flexbox.FlexboxLayout
+                                            android:id="@+id/occupation_pckg_flex"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="5dp"
+                                            app:flexDirection="row"
+                                            app:flexWrap="wrap" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Salary Income"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/salary_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/step3_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_rectangle_pink_border"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="3dp"
+                            android:text="view More"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/step4_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:cardCornerRadius="5dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                // current address
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Country"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_country_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="State"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_state_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="District"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_district_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/district_flexLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginVertical="3dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+
+                                        <com.google.android.flexbox.FlexboxLayout
+                                            android:id="@+id/district_flex"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="5dp"
+                                            app:flexDirection="row"
+                                            app:flexWrap="wrap" />
+
+                                    </LinearLayout>
+                                    <!--end district-->
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Office Country"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_country_job_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Office State"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_state_job_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Office District"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/current_district_job_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/district_job_flexLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginVertical="3dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+
+                                        <com.google.android.flexbox.FlexboxLayout
+                                            android:id="@+id/district_job_flex"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="5dp"
+                                            app:flexDirection="row"
+                                            app:flexWrap="wrap" />
+
+                                    </LinearLayout>
+
+
+
+
+                                    <!--Start mother tongue-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:weightSum="4">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Mother Tongue"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+                                        <LinearLayout
+                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                            android:layout_weight="2.5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content">
+                                            <Spinner
+                                                android:id="@+id/mother_tounge_spinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/mother_tongue_flexLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginVertical="3dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+
+                                        <com.google.android.flexbox.FlexboxLayout
+                                            android:id="@+id/mother_tongue_flex"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="5dp"
+                                            app:flexDirection="row"
+                                            app:flexWrap="wrap" />
+
+                                    </LinearLayout>
+                                    <!--end mother tongue-->
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"
+                                        android:visibility="gone"
+                                        android:weightSum="4">
+
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1.5"
+                                            android:text="Expectations"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="15sp" />
+
+
+                                        <EditText
+                                            android:id="@+id/expectation"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.5"
+                                            android:background="@drawable/edittxt_gray_line"
+                                            android:padding="9dp"
+                                            android:textSize="15dp" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:id="@+id/step4_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_rectangle_pink_border"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="3dp"
+                            android:text="view More"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/step5_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                <!--Start lifestyale-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Life-style"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/lifestyle_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lifestyle_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginVertical="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/lifestyle_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+
+                                </LinearLayout>
+                                <!--end lifestyale-->
+
+                                <!--Start dietary-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Dietary"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/dietary_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/dietary_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginVertical="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/dietary_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+
+                                </LinearLayout>
+                                <!--end dietary-->
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/step5_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_rectangle_pink_border"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="3dp"
+                            android:text="view More"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/step6_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/b"
+                            android:elevation="3dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <!--Start Color Complexion-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Color Complexion"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/colorcomplex_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/color_complexion_flexLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginVertical="3dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/edittxt_gray_line_no_padding"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:id="@+id/color_complexion_flex"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        app:flexDirection="row"
+                                        app:flexWrap="wrap" />
+
+                                </LinearLayout>
+                                <!--end Color Complexion-->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp"
+                                    android:weightSum="4">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1.5"
+                                        android:text="Sampraday"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="15sp" />
+                                    <LinearLayout
+                                        android:background="@drawable/edittxt_gray_line_no_padding"
+                                        android:layout_weight="2.5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+                                        <Spinner
+                                            android:id="@+id/sampraday_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:id="@+id/update_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/btn_blue_clr"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="8dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1.5"
+                                android:text="Update"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_marginTop="13dp"
+                                            android:background="@drawable/b"
+                                            android:elevation="3dp"
+                                            android:orientation="vertical"
+                                            app:cardCornerRadius="5dp">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical">
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="13dp">
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="13dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Marital Status"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/marital_status_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Color Complexion"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/colorcomplex_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Height"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/height_spinner"
+
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Religion"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/religion_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Cast"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/caste_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Sub-Cast"
+                                                            android:textColor="@color/DarkGray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/sub_caste_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Age From"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                android:id="@+id/agefrom_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Age To"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                android:id="@+id/ageto_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginTop="10dp"
+                                                            android:orientation="horizontal"
+                                                            android:padding="8dp"
+                                                            android:weightSum="4">
+
+
+                                                            <TextView
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_weight="1.5"
+                                                                android:text="Education Type"
+                                                                android:textColor="@color/Gray"
+                                                                android:textSize="15sp" />
+
+                                                            <LinearLayout
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_weight="2.5"
+                                                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                    android:id="@+id/education_type_spinner"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content" />
+
+                                                            </LinearLayout>
+
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/education_type_flexLL"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="8dp"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                                            android:orientation="vertical"
+                                                            android:visibility="gone">
+
+
+                                                            <com.google.android.flexbox.FlexboxLayout
+                                                                android:id="@+id/education_type_flex"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:padding="5dp"
+                                                                app:flexDirection="row"
+                                                                app:flexWrap="wrap" />
+
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:id="@+id/educationFlexBothLL"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginTop="10dp"
+                                                            android:orientation="horizontal"
+                                                            android:padding="8dp"
+                                                            android:weightSum="4">
+
+
+                                                            <TextView
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_weight="1.5"
+                                                                android:text="Education"
+                                                                android:textColor="@color/Gray"
+                                                                android:textSize="15sp" />
+
+                                                            <LinearLayout
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_weight="2.5"
+                                                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                    android:id="@+id/highest_education_spinner"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content" />
+
+                                                            </LinearLayout>
+
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/education_flexLL"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="8dp"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                                            android:orientation="vertical"
+                                                            android:visibility="gone">
+
+
+                                                            <com.google.android.flexbox.FlexboxLayout
+                                                                android:id="@+id/education_pckg_flex"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:padding="5dp"
+                                                                app:flexDirection="row"
+                                                                app:flexWrap="wrap" />
+
+                                                        </LinearLayout>
+
+                                                    </LinearLayout>
+
+                                                &lt;!&ndash;occupation type&ndash;&gt;
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginTop="10dp"
+                                                            android:orientation="horizontal"
+                                                            android:padding="8dp"
+                                                            android:weightSum="4">
+
+
+                                                            <TextView
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_weight="1.5"
+                                                                android:text="Occupation Type"
+                                                                android:textColor="@color/Gray"
+                                                                android:textSize="15sp" />
+
+                                                            <LinearLayout
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_weight="2.5"
+                                                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                    android:id="@+id/occupation_type_spinner"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content" />
+
+                                                            </LinearLayout>
+
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/occupation_type_flexLL"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="8dp"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                                            android:orientation="vertical"
+                                                            android:visibility="gone">
+
+
+                                                            <com.google.android.flexbox.FlexboxLayout
+                                                                android:id="@+id/occupation_type_flex"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:padding="5dp"
+                                                                app:flexDirection="row"
+                                                                app:flexWrap="wrap" />
+
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:id="@+id/occupationFlexBothLL"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginTop="10dp"
+                                                            android:orientation="horizontal"
+                                                            android:padding="8dp"
+                                                            android:weightSum="4">
+
+
+                                                            <TextView
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_weight="1.5"
+                                                                android:text="Occupation"
+                                                                android:textColor="@color/Gray"
+                                                                android:textSize="15sp" />
+
+                                                            <LinearLayout
+                                                                android:layout_width="0dp"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_weight="2.5"
+                                                                android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                    android:id="@+id/occupation_spinner"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content" />
+
+                                                            </LinearLayout>
+
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/occupation_flexLL"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="8dp"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding"
+                                                            android:orientation="vertical"
+                                                            android:visibility="gone">
+
+
+                                                            <com.google.android.flexbox.FlexboxLayout
+                                                                android:id="@+id/occupation_pckg_flex"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:padding="5dp"
+                                                                app:flexDirection="row"
+                                                                app:flexWrap="wrap" />
+
+                                                        </LinearLayout>
+
+                                                    </LinearLayout>
+
+
+                                        &lt;!&ndash;end occupation type&ndash;&gt;
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Life-style"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/lifestyle_spinner"
+                                                                android:layout_width="fill_parent"
+                                                                android:layout_height="wrap_content" />
+
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Dietary"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <Spinner
+                                                                android:id="@+id/dietary_spinner"
+                                                                android:layout_width="fill_parent"
+                                                                android:layout_height="wrap_content" />
+
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Sampraday"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line_no_padding">
+
+                                                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                                                android:id="@+id/sampraday_spinner"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+
+                                                        </LinearLayout>
+
+
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal"
+                                                        android:padding="8dp"
+                                                        android:weightSum="4">
+
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Expectations"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="15sp" />
+
+
+                                                        <EditText
+                                                            android:id="@+id/expectation"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2.5"
+                                                            android:background="@drawable/edittxt_gray_line"
+                                                            android:padding="9dp"
+                                                            android:textSize="15dp" />
+
+
+                                                    </LinearLayout>
+
+
+                                        &lt;!&ndash;=====================&ndash;&gt;
+                                                    <LinearLayout
+                                                        android:id="@+id/update_btn"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="13dp"
+                                                        android:layout_marginBottom="20dp"
+                                                        android:background="@drawable/btn_blue_clr"
+                                                        android:paddingLeft="13dp"
+                                                        android:paddingTop="8dp"
+                                                        android:paddingRight="13dp"
+                                                        android:paddingBottom="8dp"
+                                                        android:visibility="visible">
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_horizontal"
+                                                            android:layout_weight="1.5"
+                                                            android:text="Update"
+                                                            android:textColor="@color/white"
+                                                            android:textSize="15sp"
+                                                            android:textStyle="bold" />
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+                    -->
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <!--internet code-->
+
+            <include layout="@layout/internet_layout" />
+
+            <!--end internet code-->
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

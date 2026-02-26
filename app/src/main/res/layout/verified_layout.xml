@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageView android:layout_width="90dp"
+    android:id="@+id/verifiedL"
+    android:layout_height="90dp"
+    android:src="@drawable/verified_icon"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+
+<!--
+<com.github.florent37.shapeofview.shapes.DiagonalView
+    android:id="@+id/verifiedL"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="1dp"
+    app:shape_diagonal_angle="10"
+    app:shape_diagonal_direction="left"
+    app:shape_diagonal_position="right"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"
+        android:textColor="@color/Red"
+        android:text="  VERIFIED!      "/>
+
+
+</com.github.florent37.shapeofview.shapes.DiagonalView>-->
+

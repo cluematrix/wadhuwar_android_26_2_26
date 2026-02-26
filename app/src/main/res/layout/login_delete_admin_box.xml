@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:background="@drawable/dialog_bg"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/coupon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your account deleted !"
+        android:textSize="16sp"
+        android:textColor="@color/Red"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Gray"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:text="Please contact to admin for more information"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Gray"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:text="(आपकी प्रोफाइल अधूरी होने के कारण निष्क्रिय है, शुरू करने के लिए एडमिन से संपर्क करे|)"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/call_LL"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:drawableLeft="@drawable/green_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:text=" 9420944984"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/save_amount_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Green"
+            android:textSize="14sp"
+
+            android:visibility="gone"
+            android:maxLines="1"
+            android:text="Click here to call"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:layout_gravity="center"
+            android:layout_height="0.5dp"
+            android:layout_width="110dp"
+            android:background="@color/Green"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/edit_profile_btn"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+
+        <TextView
+            android:background="@drawable/edittxt_gray_line"
+            android:id="@+id/cancel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Cancel"
+
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/Gray"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_toLeftOf="@+id/view_line"
+            android:id="@+id/whatapp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="What'sapp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/Green"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_centerVertical="true"
+            android:id="@+id/view_line"
+            android:layout_toLeftOf="@+id/call_btn"
+
+            android:layout_height="20dp"
+            android:layout_width="0.5dp"
+            android:background="@color/Gray"/>
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Call Now"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/Green"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

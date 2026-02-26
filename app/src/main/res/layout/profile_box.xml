@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:background="@drawable/dialog_bg"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/person_2"
+        android:background="@drawable/red_circle"
+        android:layout_height="80dp"
+        />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your Photo"
+        android:textSize="33sp"
+        android:textColor="@color/DimGray"/>
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/save_amount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Gray"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:maxLines="1"
+        android:text="Add your photo for better profile match!"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/add_profile_btn"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:orientation="horizontal"
+        android:background="@drawable/curve_blue_btn_bg"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+
+            android:id="@+id/pkg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Add Photo"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

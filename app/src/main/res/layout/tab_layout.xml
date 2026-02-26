@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/img_Search"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/search_gray"
+        android:text="Search"
+        android:visibility="visible" />
+
+
+    <androidx.cardview.widget.CardView
+
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="5dp">
+
+
+        <LinearLayout
+            android:background="@drawable/tab_item_selector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tab_title"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/description_text"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

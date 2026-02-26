@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/coupon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share App"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/save_amount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:maxLines="1"
+        android:text="Are you want to sure Share App ?"
+        android:textColor="@color/Gray"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/no_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_share_btn_bg"
+            android:gravity="center"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:layout_marginRight="5dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/share_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/curve_share_btn_bg"
+            android:drawableLeft="@drawable/ic_baseline_share_24"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:text="Share"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
